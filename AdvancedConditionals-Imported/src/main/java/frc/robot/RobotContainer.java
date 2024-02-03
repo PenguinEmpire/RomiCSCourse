@@ -35,7 +35,7 @@ public class RobotContainer {
 
   // Assumes a gamepad plugged into channnel 0
   private final Joystick m_controller = new Joystick(0);
-  private final JoystickButton m_buttonA = new JoystickButton(m_controller, 1);
+  private final JoystickButton m_buttonA = new JoystickButton(m_controller, 2);
 
   // Create SmartDashboard chooser for autonomous routines
   private final SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -97,6 +97,6 @@ public class RobotContainer {
    */
   public Command getArcadeDriveCommand() {
     return new ArcadeDrive(
-        m_drivetrain, () -> -m_controller.getRawAxis(1), () -> m_controller.getRawAxis(2));
+        m_drivetrain, () -> m_controller.getRawAxis(0), () -> m_controller.getRawAxis(1));
   }
 }
