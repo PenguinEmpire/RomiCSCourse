@@ -27,6 +27,7 @@ public class RomiDrivetrain {
 
   /** Creates a new RomiDrivetrain. */
   public RomiDrivetrain() {
+    m_rightMotor.setInverted(true);
     // Use inches as unit for encoder distances
     m_leftEncoder.setDistancePerPulse((Math.PI * kWheelDiameterInch) / kCountsPerRevolution);
     m_rightEncoder.setDistancePerPulse((Math.PI * kWheelDiameterInch) / kCountsPerRevolution);
