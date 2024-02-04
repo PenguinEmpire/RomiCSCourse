@@ -26,7 +26,7 @@ public class DefaultDrive extends Command {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    drivetrain.arcadeDrive(joystick.getRawAxis(0), joystick.getRawAxis(1));
+    drivetrain.arcadeDrive(-joystick.getRawAxis(1), -joystick.getRawAxis(0));
   }
 
   // Called once the command ends or is interrupted.

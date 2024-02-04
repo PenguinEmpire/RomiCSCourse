@@ -28,6 +28,8 @@ public class RomiDrivetrain extends SubsystemBase {
 
   /** Creates a new RomiDrivetrain. */
   public RomiDrivetrain() {
+    // Invert right motor direction per https://docs.wpilib.org/en/stable/docs/romi-robot/getting-to-know-romi.html
+    m_rightMotor.setInverted(true);
     // Use inches as unit for encoder distances
     m_leftEncoder.setDistancePerPulse((Math.PI * kWheelDiameterInch) / kCountsPerRevolution);
     m_rightEncoder.setDistancePerPulse((Math.PI * kWheelDiameterInch) / kCountsPerRevolution);
