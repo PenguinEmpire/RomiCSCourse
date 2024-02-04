@@ -17,15 +17,11 @@ public class DriveASquare extends SequentialCommandGroup {
   public DriveASquare(Drivetrain drivetrain) {
     // Add your commands in the addCommands() call, e.g.
     // addCommands(new FooCommand(), new BarCommand());
-    addCommands(
-      new DriveDistance(.5, 5, drivetrain),
-      new TurnDegrees(.5, 90, drivetrain),
-      new DriveDistance(.5, 5, drivetrain),
-      new TurnDegrees(.5, 90, drivetrain),
-      new DriveDistance(.5, 5, drivetrain),
-      new TurnDegrees(.5, 90, drivetrain),
-      new DriveDistance(.5, 5, drivetrain),
-      new TurnDegrees(.5, 90, drivetrain)
-    );
+    for(int i = 0; i < 4; i++) {
+      addCommands(
+        new DriveDistance(.5, 5, drivetrain),
+        new TurnDegrees(.5, 90, drivetrain)
+      );
+    }
   }
 }

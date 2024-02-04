@@ -1,0 +1,32 @@
+{
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/SmartDashboard/SendableChooser[0]": "String Chooser"
+    }
+  },
+  "NetworkTables": {
+    "retained": {
+      "Romi": {
+        "Config": {
+          "open": true
+        },
+        "Information": {
+          "open": true
+        },
+        "Status": {
+          "open": true
+        },
+        "open": true
+      }
+    }
+  },
+  "NetworkTables Info": {
+    "Server": {
+      "Publishers": {
+        "open": true
+      }
+    },
+    "visible": true
+  }
+}
